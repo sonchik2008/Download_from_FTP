@@ -1,3 +1,4 @@
+#My programm
 from ftplib import FTP
 import datetime
 import os
@@ -14,7 +15,7 @@ ftp.cwd('infobase') # change to folder on ftp
 filename = ((now)+'_'+'yourname.1CD') # create file
 
 with open(filename, 'wb') as f:
-    ftp.retrbinary('RETR ' + '1Cv8.1CD', f.write)
+    ftp.retrbinary('RETR ' + '1Cv8.1CD', f.write) # copy file
 
 #quit from ftp
 ftp.quit()
@@ -32,3 +33,4 @@ for folder, subfolders, files in os.walk('d:\\test1'): # add file endswith *.1CD
  
 test1_zip.close()
 os.remove(filename)
+# end my code
